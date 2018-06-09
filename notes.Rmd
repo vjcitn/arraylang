@@ -1,0 +1,35 @@
+---
+title: "Towards language-independent associative array processing"
+author: "Vincent J. Carey, stvjc at channing.harvard.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{arraylang}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+```{r setup,echo=FALSE,results="hide"}
+suppressPackageStartupMessages({
+suppressMessages({
+message("hi")
+})
+})
+```
+
+# Introduction
+
+Programming with arrays in R is very natural.  
+Arrays in R can be said to be type-polymorphic,
+by which we mean that arrays can be defined for different
+data types, such as strings, bitfields, double precision numbers.
+In this paper we will focus on two-dimensional arrays and
+will refer to these as matrices.
+
+A nice property of matrices in R is that we can use different
+approaches to element and submatrix extraction.
